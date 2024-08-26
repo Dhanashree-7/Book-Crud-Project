@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+<body>
+    <form action="" method="POST"></form>
+    <button><a href="/addbook">Add Book</a></button>
+
+    <h2>List of Books</h2>
+    <form action="" method="POST"></form>
+        {% for book in book_list %}
+        <table>
+            <h3>
+            <a href="/bookdetails/{{book.pk}}"><strong>{{ book }}</strong></a><br>&nbsp;
+            <a href="/editbook/{{book.pk}}"><strong>Edit</strong></a><br>&nbsp;
+            <a href="/deletebook/{{book.pk}}"><strong>Delete</strong></a><br>&nbsp;
+            <a href="/details/{{book.slug}}"><strong> View Details</strong></a><br>
+            </h3>
+        </table>
+        {% endfor %}
+    
+   
+</body>
+</html>
